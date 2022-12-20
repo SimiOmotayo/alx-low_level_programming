@@ -1,21 +1,24 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
-   * print_rev - print a string in reverse
-   * @s: char array string type
-  */
+   * rev_string - reverse a string
+   * @s: char array type string
+ */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int i;
+	int i, c, l;
+	char d;
 
 	for (i = 0; s[i] != '\0'; i++)
 		;
 
-	for (i--; i >= 0; i--)
-		putchar(s[i]);
-
-	putchar ('\n');
+	l = i;
+	for (i--, c = 0; c < l / 2; i--, c++)
+	{
+		d = s[c];
+		s[c] = s[i];
+		s[i] = d;
+	}
 
 }
