@@ -8,15 +8,9 @@
 
 int _isupper(int c)
 {
-	int i;
+	if (c > 64 && c < 91)
+		return (1);
 
-	for (i = 'A'; i <= 'Z'; i++)
-	{
-	if (i == c)
-	{
-	return (1);
-	}
-	}
 	return (0);
 
 }
