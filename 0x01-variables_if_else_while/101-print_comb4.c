@@ -14,7 +14,7 @@ int main(void)
 	{
 		j = i / 100;
 		k = (i / 10) % 10;
-		l = i %
+		l = i %10;
 
 		if (j < k && k < l)
 		{
